@@ -47,7 +47,7 @@ Table of Contents:
 
   ##### 参数共享
 
-  一个filter在移动过程中，filter的参数不变。例如3 \* 3 \* 1的filter，在某个卷积某层使用其对一个图进行卷积的过程中，9个参数的值不变。https://www.zhihu.com/question/47158818/answer/670431317中详细介绍了参数共享。
+  一个filter在移动过程中，filter的参数不变。例如3 \* 3 \* 1的filter，在某个卷积某层使用其对一个图进行卷积的过程中，9个参数的值不变。https://www.zhihu.com/question/47158818/answer/670431317 中详细介绍了参数共享。
 
 #### Transfer_Learning
 
