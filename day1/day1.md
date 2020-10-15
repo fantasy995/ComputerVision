@@ -13,6 +13,7 @@ Table of Contents:
 + [Transfer Learning](#Transfer_Learning)
   + [三种主要使用方式](#三种主要使用方式)
   + [使用建议](#使用建议)
++ [实现TORCHVISION_OBJECT_DETECTION_FINETUNING项目](#实现TORCHVISION_OBJECT_DETECTION_FINETUNING项目)
 
 
 
@@ -55,7 +56,7 @@ Table of Contents:
 
   https://cs231n.github.io/transfer-learning 中对Transfer Learning进行了说明，解释了其必要性。
 
-  问题：很少有人能够拥有庞大的数据集对完全随机的初始网络参数进行训练。同时，在我看了从0开始训练，也需要耗费很长的时间，并且效果不确定。
+  问题：很少有人能够拥有庞大的数据集对完全随机的初始网络参数进行训练。同时，在我看来从0开始训练，也需要耗费很长的时间，并且效果不确定。
 
   其主要含义是使用预训练好的卷积模型，这个卷积模型已经有很好的特征提取能力。
 
@@ -70,8 +71,6 @@ Table of Contents:
   ##### 使用建议
 
   同时，文档中给出了微调模型的建议，主要依据是新数据集的大小，以及新数据集与原始数据集是否相似。
-
-  
 
 
 
