@@ -1,4 +1,4 @@
-#### 今天阅读了两篇笔记，https://cs231n.github.io/convolutional-networks/和https://cs231n.github.io/transfer-learning/。
+#### 今天阅读了两篇笔记，https://cs231n.github.io/convolutional-networks/ 和 https://cs231n.github.io/transfer-learning/ 。
 
 #### 第一篇介绍了卷积神经网络的相关知识，了解了三种主要的层：卷积层、池化层和全连接层。对每个层的功能有了一定的了解。通过笔记中卷积过程的动图演示，了解了一个7 \* 7 \* 3 的输入图片通过卷积变成 3 \* 3 \* 2的输出的过程。
 
