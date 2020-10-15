@@ -53,7 +53,7 @@ Table of Contents:
 
   在PyTorch官网的教程中，很多次提到了这个词。
 
-  https://cs231n.github.io/transfer-learning/中对Transfer Learning进行了说明，解释了其必要性。
+  https://cs231n.github.io/transfer-learning 中对Transfer Learning进行了说明，解释了其必要性。
 
   问题：很少有人能够拥有庞大的数据集对完全随机的初始网络参数进行训练。同时，在我看了从0开始训练，也需要耗费很长的时间，并且效果不确定。
 
