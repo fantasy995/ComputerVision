@@ -8,9 +8,9 @@ Table of Contents:
 
 + [阅读时遇到的不理解的词](#阅读时遇到的不理解的词)
 + [卷积神经网络](#卷积神经网络)
-  + [卷积过程，输入和输出大小关系](#卷积过程，输入和输出大小关系)
+  + [卷积过程,输入和输出大小关系](#卷积过程,输入和输出大小关系)
   + [参数共享](#参数共享)
-+ [Transfer Learning](#Transfer Learning)
++ [Transfer Learning](#Transfer_Learning)
   + [三种主要使用方式](#三种主要使用方式)
   + [使用建议](#使用建议)
 
@@ -33,7 +33,7 @@ Table of Contents:
 
   输出的深度是多少，Filter的数量就是多少。每一个Filter对图像（feature map）进行卷积操作后，得到一个32\*32的图像（activation map），用不同filter得到的activation map堆叠起来，得到32\*32\*12的输出。
 
-  ##### 卷积过程，输入和输出大小关系
+  ##### 卷积过程,输入和输出大小关系
 
    $(W-F+2 P) / S+1$ ，这个公式得到的是输出图像的二维大小。例如7\*7的输入，用3\*3的filter，步长1，pad0，卷积后，得到的输出大小是5 \* 5。
 
@@ -49,7 +49,7 @@ Table of Contents:
 
   一个filter在移动过程中，filter的参数不变。例如3 \* 3 \* 1的filter，在某个卷积某层使用其对一个图进行卷积的过程中，9个参数的值不变。https://www.zhihu.com/question/47158818/answer/670431317中详细介绍了参数共享。
 
-#### Transfer Learning
+#### Transfer_Learning
 
   在PyTorch官网的教程中，很多次提到了这个词。
 
