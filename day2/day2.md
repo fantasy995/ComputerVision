@@ -10,7 +10,7 @@ Table of Contents:
 + [加载微调后的模型进行预测](#加载微调后的模型进行预测)
 + [总结](#总结)
 + [存在的问题](#存在的问题)
-+ [明日基本目标](#明日基本目标)
++ [后续任务](#后续任务)
 
 #### Compose类
 
@@ -68,7 +68,7 @@ data_loader = torch.utils.data.DataLoader(
 
 由于`gpu`内存不够，只能使用`cpu`进行训练，因此只选取少量数据看看能不能够进行训练。
 
-训练用的data_loader，每次获取数据时会得到两个对象，`img`，和`target`。`img`已经变成内容为0-1，`targe`t中包含待检测目标的识别框四个角的坐标。
+训练用的data_loader，每次获取数据时会得到两个对象，`img`，和`target`。`img`已经变成内容为0-1，`target`中包含待检测目标的识别框四个角的坐标。
 
 模型根据`img`得到输出`out`，`out`中包含信息`boxes`等，即模型得到的目标检测框，再跟目标输出`target`中的对应信息进行比较，计算误差，从而进行梯度下降的操作。
 
@@ -130,11 +130,11 @@ optimizer.step()
 >            print(weights)
 >    ```
 
-`optimizer.zero_grad()`对应`d_weights = [0] \* n`，因为一个batch的loss关于weight的导数是所有sample的loss关于weight的导数的累加和。
+`optimizer.zero_grad()`对应`d_weights = [0] * n`，因为一个batch的loss关于weight的导数是所有sample的loss关于weight的导数的累加和。
 
-`loss.backward()`对应`d_weights = [d_weights[j] + (label[k] - h) \* input[k][j] for j in range(n)]`。即反向传播求梯度。
+`loss.backward()`对应`d_weights = [d_weights[j] + (label[k] - h) * input[k][j] for j in range(n)]`。即反向传播求梯度。
 
-`optimizer.step()`对应`weights = [weights[k] + alpha \* d_weights[k] for k in range(n)]`，即更新所有参数。
+`optimizer.step()`对应`weights = [weights[k] + alpha * d_weights[k] for k in range(n)]`，即更新所有参数。
 
 #### 加载微调后的模型进行预测
 
@@ -167,7 +167,6 @@ model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=False, num
 ##### 总结
 
 今天基本完成了`PyTorch`上第一个图像方面的教程。
-
 虽然对模型进行了训练，并且加载参数进行了检测。但模型结构并不是我们定义的，只是加载了这个已经定义并预训练的模型进行了一些操作。对于很多内容还没有清晰的认识。接下来不再学习其他的教程，而是从小的demo入手，尝试亲手构建模型。并且理论方面的知识还要加深。
 
 #### 存在的问题
@@ -177,7 +176,7 @@ model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=False, num
 2、对了解每种梯度下降算法的主要特点，以及实现方式。
 
 3、不了解学习率更新方面的知识。
-#### 明日基本目标
+#### 后续任务
 
 1、找一些教程，要包含模型的实现，不用太复杂。
 
