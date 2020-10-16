@@ -178,7 +178,7 @@ model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=False, num
 
 1、不了解 `Mask R-CNN `的结构。
 
-2、对了解每种梯度下降算法的主要特点，以及实现方式。
+2、不了解每种梯度下降算法的主要特点，以及实现方式。
 
 3、不了解学习率更新方面的知识。
 #### 后续任务
