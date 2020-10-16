@@ -1,20 +1,18 @@
 Table of Contents:
 
-+ [总结](#总结)
-+ [torchvision.transforms. Compose类](#torchvision.transforms. Compose类)
++ [Compose类](#Compose类)
 + [DataLoader类](#DataLoader类)
 + [训练模型](#训练模型)
   + [定义data_loader](#定义data_loader)
   + [定义优化器](#定义优化器)
   + [正向传播](#正向传播)
   + [反向传播](#反向传播)
++ [加载微调后的模型进行预测](#加载微调后的模型进行预测)
++ [总结](#总结)
++ [存在的问题](#存在的问题)
 + [明日基本目标](#明日基本目标)
 
-##### 总结
-
-今天基本完成了PyTorch上第一个图片处理的教程。
-
-#### torchvision.transforms. Compose类
+#### Compose类
 
 >`torchvision`是pytorch的一个图形库，它服务于PyTorch深度学习框架的，主要用来构建计算机视觉模型。`torchvision.transforms`主要是用于常见的一些图形变换。以下是`torchvision`的构成：
 
@@ -37,7 +35,7 @@ self.transforms = transforms
 print(self.transforms)
 ```
 
-通过get_transform函数得到的Compose对象，包含一个操作：将图像转换成Tensor类型，如果是训练集，对图像依概率进行翻转操作。
+通过`get_transform`函数得到的`Compose`对象，包含一个操作：将图像转换成Tensor类型，如果是训练集，对图像依概率进行翻转操作。
 
 #### DataLoader类
 
@@ -138,7 +136,54 @@ optimizer.step()
 
 `optimizer.step()`对应`weights = [weights[k] + alpha \* d_weights[k] for k in range(n)]`，即更新所有参数。
 
+#### 加载微调后的模型进行预测
+
+每个`epoch`后保存模型参数，以后加载模型后，载入保存的参数。进行目标检测。
+
+```python
+for epoch in range(num_epochs):    # train for one epoch, printing every 10 iterations
+    train_one_epoch(model, optimizer, data_loader, device, epoch, print_freq=10)    
+    # update the learning rate
+    lr_scheduler.step()    
+    # 保存参数
+    utils.save_on_master({        
+        'model': model.state_dict()
+    },        
+        '..\\models\\model_{}.pth'.format(epoch))    
+    # evaluate on the test dataset    
+    evaluate(model, data_loader_test, device=device)
+```
+
+```python
+model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=False, num_classes=num_classes)model.to(device)model.eval()save = torch.load('..\\models\\model_0.pth')model.load_state_dict(save['model'])
+```
+
+由于显卡内存不够，使用cpu进行训练，训练次数不多，检测效果一般。
+
+![](https://github.com/fantasy995/ImageProcessing/blob/main/day2/p1.png?raw=true)
 
 
+
+##### 总结
+
+今天基本完成了`PyTorch`上第一个图像方面的教程。
+
+虽然对模型进行了训练，并且加载参数进行了检测。但模型结构并不是我们定义的，只是加载了这个已经定义并预训练的模型进行了一些操作。对于很多内容还没有清晰的认识。接下来不再学习其他的教程，而是从小的demo入手，尝试亲手构建模型。并且理论方面的知识还要加深。
+
+#### 存在的问题
+
+1、不了解 `Mask R-CNN `的结构。
+
+2、对了解每种梯度下降算法的主要特点，以及实现方式。
+
+3、不了解学习率更新方面的知识。
 #### 明日基本目标
+
+1、找一些教程，要包含模型的实现，不用太复杂。
+
+2、找`Mask R-CNN`的源代码，获一些比较详细的介绍，了解其结构，以及相关原理。
+
+3、学习梯度下降算法，并结合`PyTorch`。
+
+4、学习学习率调整算法，并结合`PyTorch`。
 
