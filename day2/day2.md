@@ -167,6 +167,11 @@ model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=False, num
 ##### 总结
 
 今天基本完成了`PyTorch`上第一个图像方面的教程。
+
+阅读了几篇文章，https://zhuanlan.zhihu.com/p/37998710 https://zhuanlan.zhihu.com/p/31426458 
+
+文章中对Mask R-CNN和Fast RCNN进行了介绍。
+
 虽然对模型进行了训练，并且加载参数进行了检测。但模型结构并不是我们定义的，只是加载了这个已经定义并预训练的模型进行了一些操作。对于很多内容还没有清晰的认识。接下来不再学习其他的教程，而是从小的demo入手，尝试亲手构建模型。并且理论方面的知识还要加深。
 
 #### 存在的问题
@@ -180,7 +185,7 @@ model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=False, num
 
 1、找一些教程，要包含模型的实现，不用太复杂。
 
-2、找`Mask R-CNN`的源代码，获一些比较详细的介绍，了解其结构，以及相关原理。
+2、找`Mask R-CNN`的源代码，或一些比较详细的介绍进行阅读，了解其结构，以及相关原理。
 
 3、学习梯度下降算法，并结合`PyTorch`。
 
