@@ -34,7 +34,7 @@ Table of Contents:
 
 每次卷积之后，得到的矩阵中的数据是原图像的特征。
 
-![](E:\ProgramData\Anaconda3\envs\imageprocessing\projects\images\QQ截图20201017141236.jpg)
+![](https://github.com/fantasy995/ComputerVision/blob/main/images/QQ%E6%88%AA%E5%9B%BE20201017141236.jpg?raw=true)
 
 如上图，一个`39 * 39 * 3`的图片在三次卷积之后，得到`7 * 7 * 40`的输出。有`1960(7 * 7 * 40)`个特征。之后可以进行平滑操作，将其转化成一个向量。这个向量作为`softmax`函数的输入，函数将这组特征映射成一个0-1之间的数。
 
@@ -76,7 +76,7 @@ softmax函数主要用于分类问题，得出属于某种类别的概率。
 
 ##### 定义式
 
-$y_{k}=\frac{\exp \left(a_{k}\right)}{\sum_{i=1}^{n} \exp \left(a_{i}\right)}$
+![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-17_23-07-12.png?raw=true)
 
 含义：对于一个输入数据
 
