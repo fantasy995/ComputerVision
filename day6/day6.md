@@ -32,7 +32,7 @@ Table Of Contents：
 
 当这个概率最大时，表示原分布与*θ*条件下的分布非常相似。
 
-数据点*θ\**的估计概率密度是`Pr(x*|θ*)`。
+数据点`θ*`的估计概率密度是`Pr(x*|θ*)`。
 
 ![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-20_14-47-09.png?raw=true)
 
