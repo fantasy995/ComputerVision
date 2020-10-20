@@ -92,7 +92,7 @@ Table Of Contents：
 
 ![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-20_16-57-32.png?raw=true)
 
-*L = Pr(x1 ... xI|θ)*在*+*号位置取得最大值。同时也是极值。
+*L = Pr(x1 ... xI|θ)*在*+*位置取得最大值。同时也是极值。
 
 #### 总结
 
