@@ -20,19 +20,19 @@ Table Of Contents：
 
 *x1,x2, ... ,xI*是从独立抽样得到的数据。
 
-*x\**是新数据点，讨论*x\**在拟合的概率模型下的概率。
+`x*`是新数据点，讨论*x\**在拟合的概率模型下的概率。
 
-*θ\**是拟合的概率模型的参数。
+`θ*`是拟合的概率模型的参数。
 
 #### 最大似然法(ML)
 
-当*Pr(x1...I|θ)*最大时，这个*θ*就是*θ\**。
+当*Pr(x1...I|θ)*最大时，这个*θ*就是`θ\*`。
 
 这个方法理解为，为*θ*赋值，计算在这个条件下，抽样得到*x1,x2, ... ,xk*这组数据的概率。
 
 当这个概率最大时，表示原分布与*θ*条件下的分布非常相似。
 
-数据点*θ\**的估计概率密度是*Pr(x\*|θ\*)*。
+数据点*θ\**的估计概率密度是`Pr(x*|θ*)`。
 
 ![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-20_14-47-09.png?raw=true)
 
@@ -60,7 +60,7 @@ Table Of Contents：
 
 有多个参数*θ*符合抽样数据的分布。
 
-基于上述的多个参数*θ*，估计点*x\**的概率密度：
+基于上述的多个参数*θ*，估计点`x*`的概率密度：
 
 ![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-20_15-34-02.png?raw=true)
 
@@ -92,7 +92,7 @@ Table Of Contents：
 
 ![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-20_16-57-32.png?raw=true)
 
-*L = Pr(x1 ... xI|θ)*在*+*位置取得最大值。同时也是极值。
+`L = Pr(x1 ... xI|θ)`在`+`位置取得最大值。同时也是极值。
 
 #### 总结
 
