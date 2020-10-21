@@ -136,7 +136,7 @@ d) 在推理时，选取一新数据 *x* 并根据贝叶斯法则计算状态的
 
 ![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-21_18-35-49.png?raw=true)
 
-我们需要让*Pr(ω=0|x)*与*Pr(ω=1|x)*的和为1。
+我们需要让*Pr(ω=0|x)* 与*Pr(ω=1|x)* 的和为1。
 
 #### 总结
 
