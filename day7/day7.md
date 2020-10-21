@@ -114,13 +114,13 @@ Table Of Contents:
 
 a) 选取一正态分布来表示数据 *x0*。
 
-b) 令该正态分布的参数 *{μ, σ2}* 为全局状态*w* 的函数。在实际情况下，这意味着在全局状态 $w=0$ 时使用一组均值和方差，在 $w=1$ 时使用另一组均值和方差。学习算法根据训练样本对 ![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-21_18-13-42.png?raw=true) 来 拟合参数 
+b) 令该正态分布的参数 *{μ, σ2}* 为全局状态*w* 的函数。在实际情况下，这意味着在全局状态 *ω=0*  时使用一组均值和方差，在 *ω=1*  时使用另一组均值和方差。学习算法根据训练样本对 ![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-21_18-13-42.png?raw=true) 来 拟合参数 
 
 ![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-21_18-13-08.png?raw=true)。
 
-c) 也将全局状态 *ω* 的先验概率建模为参数为 *λ* 的伯努利分布。
+c) 也将全局状态 *ω*  的先验概率建模为参数为 *λ*  的伯努利分布。
 
-d) 在推理时，选取一新数据 *x* 并根据贝叶斯法则计算状态的后验 *Pr(ω|x)*。
+d) 在推理时，选取一新数据 *x* 并根据贝叶斯法则计算状态的后验 *Pr(ω|x)* 。
 
 在实际情况下，这意味着当全局状态为 *ω=0* 时有一组参数![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-21_18-16-31.png?raw=true) ,当状态为 *ω=1*时有另一组不同的参数 ![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-21_18-17-40.png?raw=true) ，因此
 
