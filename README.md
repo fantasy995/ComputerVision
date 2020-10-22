@@ -1,3 +1,5 @@
+每天的工作放在对应的文件夹下，问价夹中有代码和记录当天学习内容的笔记。
+
 ### day1
 
 练习官网的教程`TORCHVISION OBJECT DETECTION FINETUNING TUTORIAL` 。
