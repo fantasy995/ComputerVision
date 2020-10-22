@@ -31,6 +31,8 @@ train_y = torch.from_numpy(train_y)
 model = nn.Linear(1, 1)
 
 loss_fn = nn.MSELoss()
+# 均方损失函数：
+# loss(xi,yi)=(xi−yi)^2
 optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
 epochs = 3000
 
