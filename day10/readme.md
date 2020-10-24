@@ -8,6 +8,14 @@ Table Of Contents：
   + [总结](#总结)
 + [编程练习](#编程练习)
 
+
+
+### 今日工作
+
+1、阅读《计算机视觉 模型、学习和推理》第七章的5-9节，完成第七章的阅读。
+
+2、编程实现二元正态的可视化。
+
 ### 复杂数据密度建模
 
 #### *t* 分布
@@ -16,7 +24,7 @@ Table Of Contents：
 
 不鲁棒：边缘数据概率密度很低，密度函数在边缘下降得很快。单个极端数据对参数得影响很大。
 
-![](E:\ProgramData\Anaconda3\envs\imageprocessing\projects\images\Snipaste_2020-10-24_16-56-46.png)
+![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-24_16-56-46.png?raw=true)
 
 *a)* 拟合数据得多元正态分布模型。
 
@@ -66,7 +74,15 @@ Table Of Contents：
 
 #### 总结
 
+本章介绍了隐变量的思想，进而引出五种模型结构。
 
+学习这种模型的主要方法是期望值最大化算法，该算法只能找到局部最优解。
+
+并说明了期望值最大算法的两个重要步骤：E步和M步。以及每个模型参数更新时的公式。
 
 ### 编程练习
+
+二维高斯模型的可视化：
+
+![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-24_21-28-22.png?raw=true)
 
