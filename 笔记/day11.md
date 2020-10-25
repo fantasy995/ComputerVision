@@ -75,7 +75,7 @@ im = im.convert('L')
 im.show()
 ```
 
-![](E:\ProgramData\Anaconda3\envs\imageprocessing\projects\images\Snipaste_2020-10-25_21-17-58.png)
+![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-25_21-17-58.png?raw=true)
 
 
 
