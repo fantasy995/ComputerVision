@@ -104,7 +104,11 @@ if __name__ == '__main__':
     plt.plot(x[:, 0], x[:, 1], '.', color='green')
     plt.show()
 
-    w, mean, sigma = fix_mod(x, 10, 0.0001)
+    w, mean, sigma = fix_mod(x, 2, 0.0001)
+    print(mean[0])
+    print(sigma[0])
+    print(mean[1])
+    print(sigma[1])
     # area = np.zeros((2,2))
     # area[0, :] = [np.min(x[:, 0]), np.max(x[:, 0])]
     # area[1, :] = [np.min(x[:, 1]), np.max(x[:, 1])]
@@ -121,8 +125,7 @@ if __name__ == '__main__':
         data[i * 100:(i + 1) * 100] = data_x2.reshape(100, 1)
     pre = np.zeros((100,100))
 
-    print(w)
-    for i in range(10):
+    for i in range(2):
         temp = w[i] * stats.multivariate_normal.pdf(data, mean[i], sigma[i]).reshape(100, 100)
         pre = pre + temp
     pre = np.rot90(pre, 1)
