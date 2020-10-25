@@ -30,9 +30,12 @@ def fix_mod(X, K, precision):
     # 初始K个D维正态分布的协方差矩阵为数据集的协方差矩阵
     data_set_mean = np.mean(X, axis=0)
     data_set_variance = np.zeros((D, D))
-    mat = X - data_set_mean  # shape: (size, D)
-    mat = np.dot(mat.T, mat)  # shape: (D, D) 数据集的协方差矩阵
-    sigma = np.array([mat for i in range(K)])
+    for i in range(batch_size):
+        mat = (X[i, :] - data_set_mean).reshape(1, D)
+        mat = np.dot(mat.T, mat)
+        data_set_variance = data_set_variance + mat
+    data_set_variance = data_set_variance / batch_size
+    sigma = np.array([data_set_variance for i in range(K)])
     # print('******************end ini sigma for every norm********************')
 
     # r = stats.multivariate_normal.pdf(X, mean[0], sigma[0])
@@ -96,19 +99,18 @@ def fix_mod(X, K, precision):
 
 
 if __name__ == '__main__':
-    x1 = np.random.multivariate_normal([1, 2], [[20, 10], [0.5, 0.1]], size=5000)
-    x2 = np.random.multivariate_normal([2, 4], [[2, 1], [50,-30]], size=5000)
-    x = x1+x2
-    plt.plot(x1[:, 0], x1[:, 1], '.', color='red')
-    plt.plot(x2[:, 0], x2[:, 1], '.', color='black')
+    x1 = np.random.multivariate_normal([1, 2], [[2, 0], [0, 0.5]], size=3500)
+    x2 = np.random.multivariate_normal([1, 5], [[1, 0], [0, 1]], size=1500)
+
+    x = np.append(x1, x2, axis=0)
+
     plt.plot(x[:, 0], x[:, 1], '.', color='green')
     plt.show()
 
     w, mean, sigma = fix_mod(x, 2, 0.0001)
-    print(mean[0])
-    print(sigma[0])
-    print(mean[1])
-    print(sigma[1])
+    print('w:', w)
+    print('mean:',mean)
+    print('sigma:', sigma)
     # area = np.zeros((2,2))
     # area[0, :] = [np.min(x[:, 0]), np.max(x[:, 0])]
     # area[1, :] = [np.min(x[:, 1]), np.max(x[:, 1])]
