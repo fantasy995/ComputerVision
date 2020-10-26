@@ -27,7 +27,7 @@ Table Of Contents:
 
 
 
-![](E:\ProgramData\Anaconda3\envs\imageprocessing\projects\images\Snipaste_2020-10-26_20-07-56.png)
+![](https://github.com/fantasy995/ComputerVision/blob/main/images/Snipaste_2020-10-26_20-07-56.png?raw=true)
 
 pytorch是动态图机制，所以在训练模型的时候，每迭代一次都会构建一个新的计算图。而计算图代表着程序中变量之间的关系。具体而言，每次向模型输入一个batch的训练数据，就会构建一个计算图。
 
