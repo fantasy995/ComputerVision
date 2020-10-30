@@ -29,21 +29,21 @@ Table Of Contents:
 
 #### 核技巧
 
-设有两个向量[![img](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116223057654-2111233806.png)](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116223057654-2111233806.png)和[![img](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116223108394-87800303.png)](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116223108394-87800303.png)
-映射定义为：[![img](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116223345254-1729603565.png)](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116223345254-1729603565.png)
+设有两个向量![](https://github.com/fantasy995/ComputerVision/blob/main/images/1612966-20191116223057654-2111233806.png?raw=true)和![](https://github.com/fantasy995/ComputerVision/blob/main/images/1612966-20191116223108394-87800303.png?raw=true)
+映射定义为：![](https://github.com/fantasy995/ComputerVision/blob/main/images/1612966-20191116223345254-1729603565.png?raw=true)
 两个向量的映射为：
-[![img](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116224124284-894094155.png)](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116224124284-894094155.png)
+![](https://github.com/fantasy995/ComputerVision/blob/main/images/1612966-20191116224124284-894094155.png?raw=true)
 
 两个向量经过映射后的內积为：
-[![img](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116223448094-1233601531.png)](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116223448094-1233601531.png)
+![](https://github.com/fantasy995/ComputerVision/blob/main/images/1612966-20191116223448094-1233601531.png?raw=true)
 我们也可以有：
-[![img](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116224234264-632179979.png)](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116224234264-632179979.png)
+![](https://github.com/fantasy995/ComputerVision/blob/main/images/1612966-20191116224234264-632179979.png?raw=true)
 
 上面的两个式子是相似的， 实际上，经过维度缩放再加上常数维度就可以得到同样的效果。区别在哪里呢？
 第一个是， **先通过映射将数据集映射到高维空间，再计算內积**
 第二个是， **直接低维空间计算內积，而不需要显式的定义映射**
 于是我们自然的可以定义**核函数** ：
-[![img](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116224750540-1067731375.png)](https://img2018.cnblogs.com/blog/1612966/201911/1612966-20191116224750540-1067731375.png)
+![](https://github.com/fantasy995/ComputerVision/blob/main/images/1612966-20191116224750540-1067731375.png?raw=true)
 
 
 
